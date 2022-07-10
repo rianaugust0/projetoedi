@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+}
+
+header {
+    background-color: #C51A6E;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+nav ul {
+    background-color: rgb(22, 11, 103);
+    list-style-type: none;
+    overflow: hidden;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 16px;
+    display: block;
+}
+
+nav a:hover {
+    background-color: white;
+    color:  rgb(22, 11, 103);
+}
+
+nav li {
+    float: left;
+}
+
+img {
+    width: 100%;
+}
+
+.row {
+    padding: 0px 20px;
+    display: table;
+}
+
+section {
+    float: left;
+    width: 75%;
+}
+
+aside {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+.parte1 {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.parte2 {
+    padding: 20px 0px;
+}
+
+
+
+aside p {
+    padding: 10px 0px;
+}
+
+aside h3 {
+    padding-bottom: 6px;
+}
+
+.paragrafo {
+    padding: 10px 0px;
+}
+
+footer {
+    background-color: rgb(22, 11, 103);
+    color: white;
+    padding: 25px;
+    margin-top: 20px;
+    display: table;
+    width: 100%;
+}
+
+footer dl, footer p {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+footer dt {
+    font-weight: bold;
+}
+
+footer dd {
+    margin-left: 0;
+}
+
+footer p {
+    text-align: right;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+h2, h3  {
+    padding: 5px 5px;
+    background-image: linear-gradient(to left, rgba(255, 255, 224, 0.404), rgba(255, 182, 193, 0.76));
+    margin: 5px 0px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.7em;
+}
+
+ p {
+    font-size: 1.1em;
+    text-indent: 20px;
+    line-height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+
+mark {
+    background-color: blue;
+    color: white;
+}
+
+@media screen and (max-width: 768px)  {
+    section, aside  {
+       width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav li{
+       float: none;
+       text-align: center;
+       width: 100%;
+
+    }
+
+    footer p {
+        display: none;
+        aa
+    }
+}
