@@ -7,6 +7,7 @@
     <title>Contato</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contato.css">
+    <link rel="shortcut icon" href="img/android-icon-36x36.png" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -21,16 +22,21 @@
         </ul>
     </nav>
     <div class="row">
-        <form class="card" autocomplete="off">
+        <form action="https://api.staticforms.xyz/submit" method="post" class="card" autocomplete="off">
+         <input type="hidden" name="accessKey" value="4bb80b40-2a5f-413b-bafd-074f9881f01d">
+
             <label for="nome">Primeiro Nome:</label>
-            <input type="text" id="nome">
+            <input type="text" name="name" id="iname" required maxlength="20" minlength="2">
+            <span></span>
             
             <label for="email">Endereço de Email:</label>
-            <input type="email" id="email">
+            <input type="email" name="email" id="iemail" required maxlength="50">
+            <span></span>
 
             <label for="msg">Mensagem:</label>
-            <textarea name="message" id="msg"></textarea>
-
+            <textarea name="message" id="msg" required></textarea>
+            <span></span>
+            
             <button type="submit">Enviar mensagem</button>
         </form>
     </div>

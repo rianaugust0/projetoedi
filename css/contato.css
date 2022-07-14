@@ -4,6 +4,8 @@
 }
 
 form {
+    position: relative;
+    top: 100px;
     width: 50%;
     margin: 0 auto;
     box-shadow: 0 4px 8px #999;
@@ -17,6 +19,34 @@ input, textarea {
     margin-bottom: 1em;
     font: 1em sans-serif;
     border: 1px solid #999;
+}
+
+span {
+    position: relative;
+    display: flex;
+    justify-content: right;
+}
+
+input:invalid + span::before, textarea:invalid + span::before {
+    content: '✖';
+    color: red;
+}
+
+input:valid + span::before, textarea:valid + span::before {
+    content: '✓';
+    color: green;
+}
+
+input + span::before {
+    position: absolute;
+    top: -47px;
+    right: 5px;
+}
+
+textarea + span::before {
+    position: absolute;
+    top: -70px;
+    right: 5px;
 }
 
 label {
@@ -41,12 +71,24 @@ button:hover {
 }
 
 input:focus, textarea:focus {
-    border-color: rgb(21, 4, 98);
+    border-color: rgb(21, 4, 98) !important;
+}
+
+input:invalid, textarea:invalid {
+    border-color: red;
+}
+
+input:valid, textarea:valid {
+    border-color: green;
 }
 
 @media screen and (max-width: 768px) {
     form {
         width: 100%;
+    }
+
+    footer {
+        height: 100%;
     }
 }
 
@@ -54,4 +96,13 @@ input:focus, textarea:focus {
     button {
         width: 100%;
     }
+    footer {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+footer {
+    position: relative;
+    bottom: -288px;
 }
